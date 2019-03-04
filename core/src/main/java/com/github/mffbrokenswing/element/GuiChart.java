@@ -31,25 +31,25 @@ public abstract class GuiChart extends GuiControl
 
     /**
      * Returns the difference between the y coordinate of a point at the top of the graph and the y coordinate of a
-     * point at the bot of the graph.
-     * Example :
+     * point at the bot of the graph.<br>
+     * <u>Example</u> :<br>
+     * <i>Let two points of coordinates (x1,y1) and (x2,y2) respectively at the top and the bot of the graph.</i><br>
+     * <br>
+     *       . = (x1, y1)<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |______________________. = (x2, y2)<br>
      *
-     * Let two points of coordinates (x1,y1) and (x2,y2) respectively at the top and the bot of the graph
-     *
-     *       . = (x1, y1)
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |______________________. = (x2, y2)
-     *
-     *
-     * Then the vertical scale is defined as <code>y1 - y2</code>
-     *
+     * <br>
+     * <i>Then the vertical scale is defined as <code>y1 - y2</code>.</i><br>
+     * <br>
      * This code is equivalent to <code>getVerticalScaleProperty().getValue()</code>
+     * @see #getVerticalScaleProperty()
      * @return the vertical scale of this graph
      */
     public float getVerticalScale()
@@ -59,25 +59,25 @@ public abstract class GuiChart extends GuiControl
 
     /**
      * Returns the difference between the x coordinate of a point at the left of the graph and the x coordinate of a
-     * point at the right of the graph.
-     * Example :
-     *
-     * Let two points of coordinates (x1,y1) and (x2,y2) respectively at the left and the right of the graph
-     *
-     *       . = (x1, y1)
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |
-     *      |______________________. = (x2, y2)
-     *
-     *
-     * Then the vertical scale is defined as <code>x2 - x1</code>
-     *
+     * point at the right of the graph.<br>
+     * <u>Example</u> :<br>
+     * <i>Let two points of coordinates (x1,y1) and (x2,y2) respectively at the left and the right of the graph.</i><br>
+     * <br>
+     *       . = (x1, y1)<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |<br>
+     *      |______________________. = (x2, y2)<br>
+     * <br>
+     * <br>
+     * <i>Then the vertical scale is defined as <code>x2 - x1</code>.</i><br>
+     * <br>
      * This code is equivalent to <code>getHorizontalScaleProperty().getValue()</code>
+     * @see #getHorizontalScaleProperty()
      * @return the horizontal scale of this graph
      */
     public float getHorizontalScale()
@@ -90,11 +90,13 @@ public abstract class GuiChart extends GuiControl
     // #################
 
     /**
-     * Returns the y coordinate of a point at the bot of the graph.
-     * Example :
-     *  Let 560 be the vertical offset, then any point on the first bottom line of the graph has 560 for y coordinate
-     *
+     * Returns the y coordinate of a point at the bot of the graph.<br>
+     * <u>Example</u> :<br>
+     * <i>Let 560 be the vertical offset, then any point on the first bottom line of the graph has 560 for y
+     * coordinate.</i><br>
+     * <br>
      * This code is equivalent to <code>getVerticalOffsetProperty().getValue()</code>
+     * @see #getVerticalOffsetProperty()
      * @return the vertical offset of this graph
      */
     public float getVerticalOffset()
@@ -103,11 +105,13 @@ public abstract class GuiChart extends GuiControl
     }
 
     /**
-     * Returns the x coordinate of a point at the left of the graph.
-     * Example :
-     *  Let 430 be the horizontal offset, then any point on the first left column of the graph has 560 for x coordinate
-     *
-     * This code is equivalent to <ode>getHorizontalOffsetProperty().getValue()</ode>
+     * Returns the x coordinate of a point at the left of the graph.<br>
+     * <u>Example</u> :
+     * <i>Let 430 be the horizontal offset, then any point on the first left column of the graph has 560 for x
+     * coordinate.</i><br>
+     * <br>
+     * This code is equivalent to <code>getHorizontalOffsetProperty().getValue()</code>
+     * @see #getHorizontalOffsetProperty()
      * @return the horizontal offset of this graph
      */
     public float getHorizontalOffset()
@@ -120,9 +124,9 @@ public abstract class GuiChart extends GuiControl
     // #####################
 
     /**
-     * Return the property for the vertical scale
+     * Returns the property for the vertical scale.
      *
-     * @see GuiChart#getVerticalScale()
+     * @see #getVerticalScale()
      * @return the {@link BaseProperty} for the vertical scale
      */
     public BaseProperty<Float> getVerticalScaleProperty()
@@ -131,9 +135,9 @@ public abstract class GuiChart extends GuiControl
     }
 
     /**
-     * Returns the property for the horizontal scale
+     * Returns the property for the horizontal scale.
      *
-     * @see GuiChart#getHorizontalScale()
+     * @see #getHorizontalScale()
      * @return the {@link BaseProperty} for the horizontal scale
      */
     public BaseProperty<Float> getHorizontalScaleProperty()
@@ -142,9 +146,9 @@ public abstract class GuiChart extends GuiControl
     }
 
     /**
-     * Returns the property for the vertical offset
+     * Returns the property for the vertical offset.
      *
-     * @see GuiChart#getVerticalOffset()
+     * @see #getVerticalOffset()
      * @return the {@link BaseProperty} for the vertical offset
      */
     public BaseProperty<Float> getVerticalOffsetProperty()
@@ -155,7 +159,7 @@ public abstract class GuiChart extends GuiControl
     /**
      * Returns the property for the horizontal offset
      *
-     * @see GuiChart#getHorizontalOffset()
+     * @see #getHorizontalOffset()
      * @return the {@link BaseProperty} for the horizontal offset
      */
     public BaseProperty<Float> getHorizontalOffsetProperty()
