@@ -1,9 +1,9 @@
 package com.github.mffbrokenswing.element;
 
 import fr.ourten.teabeans.value.BaseProperty;
-import net.voxelindustry.brokkgui.control.GuiControl;
+import net.voxelindustry.brokkgui.control.GuiElement;
 
-public abstract class GuiChart extends GuiControl
+public abstract class GuiChart extends GuiElement
 {
 
     private BaseProperty<Float> verticalScale = new BaseProperty<>(100F, "vertical-scale");

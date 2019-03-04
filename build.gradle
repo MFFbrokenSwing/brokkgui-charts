@@ -29,7 +29,12 @@ project(":core") {
 	version = "1.0.0-SNAPSHOT"
 
 	dependencies {
-		api group: 'net.voxelindustry', name: 'brokkgui-core', version: '1.0.0-32-SNAPSHOT'
+		api group: 'net.voxelindustry', name: 'brokkgui-common', version: '1.0.0-37-SNAPSHOT'
+		/*
+		api group: 'net.voxelindustry', name: 'brokkgui-elements', version: '1.0.0-37-SNAPSHOT' // We should not need it
+		api group: 'net.voxelindustry', name: 'brokkgui-style', version: '1.0.0-37-SNAPSHOT'    // We should not need it either
+		api group: 'net.voxelindustry', name: 'brokkgui-binding-mc1.12', version: '1.0.0-37-SNAPSHOT' // Should add to a submodule to test
+		*/
 	}
 }
 
