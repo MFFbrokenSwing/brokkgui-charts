@@ -1,6 +1,6 @@
-package com.github.mffbrokenswing.behavior;
+package com.github.mffbrokenswing.charts.behavior;
 
-import com.github.mffbrokenswing.element.GuiChart;
+import com.github.mffbrokenswing.charts.element.GuiChart;
 import fr.ourten.teabeans.binding.BaseBinding;
 import fr.ourten.teabeans.value.BaseProperty;
 import net.voxelindustry.brokkgui.behavior.GuiBehaviorBase;
@@ -84,6 +84,8 @@ public class GuiChartBehavior<G extends GuiChart> extends GuiBehaviorBase<G>
 
     private void onMouseDragging(GuiMouseEvent.Dragging event)
     {
+        if(getModel().isViewLocked()) return;
+
         this.updatingDrag = true;
 
         getModel().getHorizontalOffsetProperty().setValue(
@@ -98,6 +100,8 @@ public class GuiChartBehavior<G extends GuiChart> extends GuiBehaviorBase<G>
 
     private void onMouseWheel(GuiMouseEvent.Wheel event)
     {
+        if(getModel().isViewLocked()) return;
+
         float previousXSpreadingRatio = getXSpreadingRatio();
         float previousYSpreadingRatio = getYSpreadingRatio();
 

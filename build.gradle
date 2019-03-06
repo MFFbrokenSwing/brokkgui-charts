@@ -33,7 +33,6 @@ project(":core") {
 		/*
 		api group: 'net.voxelindustry', name: 'brokkgui-elements', version: '1.0.0-37-SNAPSHOT' // We should not need it
 		api group: 'net.voxelindustry', name: 'brokkgui-style', version: '1.0.0-37-SNAPSHOT'    // We should not need it either
-		api group: 'net.voxelindustry', name: 'brokkgui-binding-mc1.12', version: '1.0.0-37-SNAPSHOT' // Should add to a submodule to test
 		*/
 	}
 }
@@ -44,5 +43,15 @@ project(":graph") {
 
 	dependencies {
 		api project(":core")
+	}
+}
+
+project(":test-mod") {
+	archivesBaseName = "testmod"
+	version = "0.0.0-SNAPSHOT"
+	
+	dependencies {
+		api project(":graph")
+		api group: 'net.voxelindustry', name: 'brokkgui-binding-mc1.12', version: '1.0.0-37-SNAPSHOT'
 	}
 }

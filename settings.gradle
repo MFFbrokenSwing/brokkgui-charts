@@ -1,4 +1,5 @@
 rootProject.name = 'brokkgui-charts'
 include 'core'
 include 'graph'
+include 'test-mod'
 

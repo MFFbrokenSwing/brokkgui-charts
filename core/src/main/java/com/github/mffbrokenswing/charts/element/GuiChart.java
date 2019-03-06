@@ -1,4 +1,4 @@
-package com.github.mffbrokenswing.element;
+package com.github.mffbrokenswing.charts.element;
 
 import fr.ourten.teabeans.value.BaseProperty;
 import net.voxelindustry.brokkgui.control.GuiElement;
@@ -11,6 +11,8 @@ public abstract class GuiChart extends GuiElement
 
     private BaseProperty<Float> verticalOffset = new BaseProperty<>(0F, "vertical-offset");
     private BaseProperty<Float> horizontalOffset = new BaseProperty<>(0F, "horizontal-offset");
+
+    private BaseProperty<Boolean> lockView = new BaseProperty<>(false, "lock-view");
 
     public GuiChart()
     {
@@ -83,6 +85,17 @@ public abstract class GuiChart extends GuiElement
     public float getHorizontalScale()
     {
         return this.horizontalScale.getValue();
+    }
+
+    /**
+     * Indicates if the view is locked or not. A locked view disable modifying graph's offset and scaling using
+     * the user inputs.
+     * @see #getLockViewProperty()
+     * @return true if graph's offset and scaling can't be modified by keyboard/mouse input, else false
+     */
+    public boolean isViewLocked()
+    {
+        return this.lockView.getValue();
     }
 
     // #################
@@ -165,5 +178,16 @@ public abstract class GuiChart extends GuiElement
     public BaseProperty<Float> getHorizontalOffsetProperty()
     {
         return this.horizontalOffset;
+    }
+
+    /**
+     * Returns the property for the lock state of the view.
+     *
+     * @see #isViewLocked()
+     * @return the {@link BaseProperty} for the lock state of the view
+     */
+    public BaseProperty<Boolean> getLockViewProperty()
+    {
+        return this.lockView;
     }
 }
